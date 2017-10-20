@@ -171,12 +171,6 @@ fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
 
-graphql-server-express@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/graphql-server-express/-/graphql-server-express-1.1.7.tgz#a71cb2bd2638c5f1132c922c7f576bf87c81eb01"
-  dependencies:
-    apollo-server-express "^1.1.7"
-
 graphql-tools@^2.2.0, graphql-tools@^2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/graphql-tools/-/graphql-tools-2.5.1.tgz#542c48d4f9a532e09280ae216084813ea7ba4b18"
