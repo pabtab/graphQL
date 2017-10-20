@@ -8,7 +8,7 @@ const typeDefs = `
         # Descripcion del curso
         descripcion: String!
         profesor: Profesor
-        rating: Float
+        rating: Float @deprecated(reason: "porque si")
         comentarios: [Comentario]
     }
 
@@ -39,8 +39,42 @@ const typeDefs = `
     }
 `
 
+const resolvers = {
+    Query: {
+        cursos: () => {
+            return [{
+                id: 1,
+                titulo: 'curso graphql',
+                descripcion: 'goku gohan',
+                profesor: {
+                    nombre: 'pablo',
+                    nacionalidad: 'usa'
+                },
+                comentarios: [{
+                    nombre: 'picoro',
+                    cuerpo: 'buena pelea'
+                }]
+            }, {
+                id: 2,
+                titulo: 'curso vue',
+                descripcion: 'proximo a este',
+                profesor: {
+                    nombre: 'vegeta',
+                    nacionalidad: 'saiyajin'
+                },
+                comentarios: [{
+                    id: 2,
+                    nombre: 'krilin',
+                    cuerpo: 'master'
+                }]
+            }]
+        } 
+    }
+}
+
 const schema = makeExecutableSchema({
-    typeDefs
+    typeDefs,
+    resolvers
 })
 
 module.exports = schema
